@@ -5,7 +5,7 @@ const studentSchema = mongoose.Schema({
   email: { type: String, required: true },
   phone: { type: Number, required: true },
   enrollNo: { type: Number, required: true },
-  dateOfAddmission: { type: Date, required: true },
+  dateOfAddmission: { type: String, required: true },
 });
 
 const student = mongoose.model("Student", studentSchema);
