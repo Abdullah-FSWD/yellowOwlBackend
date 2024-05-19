@@ -12,7 +12,6 @@ export const getStudent = async (request, response) => {
 
 export const addStudent = async (request, response) => {
   const exist = await Student.findOne({ enrollNo: request.body.enrollNo });
-  console.log("Post");
 
   try {
     if (exist) {
@@ -30,10 +29,7 @@ export const addStudent = async (request, response) => {
 };
 
 export const updateStudent = async (request, response) => {
-  console.log("Update");
-  console.log(request.params);
   try {
-    console.log(request.body);
     const { id } = request.params;
     const update = request.body;
 
